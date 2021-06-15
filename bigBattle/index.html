@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+    <head>
+        <title>bigBattle</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/style.css" />
+
+        <meta http-equiv="Content-type" content="text/html;charset=UTF8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        
+    </head>
+
+    <body>
+        <header class= "header">
+            <div class= "container">
+                <div class="header__content">
+                    <div class="logo"><img src="img/logo.png" alt="Изображение не найдено" /></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class= "container">
+            <div class="menu">
+                <div class="left label">стоимость секторов</div>
+                <div class="right label">кол-во</div>
+
+                <div class="left label num">4</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus1('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form name="field1">
+                                    <input type="sum1" name="textview1" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus1('+')">+</div>
+                </div>
+
+                <div class="left label num">5</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus2('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form name="field2">
+                                    <input type="sum2" name="textview2" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus2('+')">+</div>
+                </div> 
+
+                <div class="left label num">6</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus3('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form name="field3">
+                                    <input type="sum3" name="textview3" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus3('+')">+</div>
+                </div>
+
+                <div class="left label num">7</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus4('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form  name="field4">
+                                    <input type="sum4" name="textview4" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus4('+')">+</div>
+                </div>
+
+                <div class="left label num">8</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus5('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form  name="field5">
+                                    <input type="sum5" name="textview5" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus5('+')">+</div>
+                </div> 
+                
+                <div class="left label num">9</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus6('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form  name="field6">
+                                    <input type="sum6" name="textview6" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus6('+')">+</div>
+                </div>
+
+                <div class="space"></div>
+
+                <div class="left label num">Доп.</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus7('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form  name="field7">
+                                    <input type="sum7" name="textview7" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus7('+')">+</div>
+                </div> 
+
+                <div class="left label num">Было</div>
+                <div class="right label grid">
+                        <div class="item label minus" onclick="minus8('-')">-</div>
+                        <div class="fields">
+                            <div class="item output">
+                                <form  name="field8">
+                                    <input type="sum8" name="textview8" value="0" />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="item label plus" onclick="plus8('+')">+</div>
+                </div> 
+                <div class="space"></div>
+                <div class="left label all">ВСЕГО</div>
+                <div class="right label all cells">
+                            <form  name="field">
+                                <input class="all" type="sum" name="textview0" value="0 " readonly>
+                            </form>
+                            
+                            <div class="image"></div>
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class= "calculator">
+                <div class="button input">
+                    <form name="form">
+                        <input type="text" name="textview" readonly>
+                    </form>
+                </div>
+                <div class="button clean" onclick="clean()">C</div>
+                <div class="button sign" onclick="insert('/')">&divide;</div>
+                <div class="button number" onclick="insert('7')">7</div>
+                <div class="button number" onclick="insert('8')">8</div>
+                <div class="button number" onclick="insert('9')">9</div>
+                <div class="button sign" onclick="insert('*')">&times;</div>
+                <div class="button number" onclick="insert('4')">4</div>
+                <div class="button number" onclick="insert('5')">5</div>
+                <div class="button number" onclick="insert('6')">6</div>
+                <div class="button sign" onclick="insert('+')">+</div>
+                <div class="button number" onclick="insert('1')">1</div>
+                <div class="button number" onclick="insert('2')">2</div>
+                <div class="button number" onclick="insert('3')">3</div>
+                <div class="button sign" onclick="insert('-')">-</div>
+                <div class="button zero" onclick="insert('0')">0</div>
+                <div class="button equal" onclick="equal()">=</div>
+            </div>
+        </div>
+        <footer>
+            <div class= "container">FOOTER</div>
+        </footer>
+        
+        <script>
+            var sum = 0;
+            var sum1 = 0;
+            function plus1(sign){
+                sum1 = document.field1.textview1.value + sign + 1;
+                if(document.field1.textview1.value){
+                    document.field1.textview1.value = eval(sum1);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus1(sign){
+                sum1 = document.field1.textview1.value + sign + 1;
+                if(document.field1.textview1.value){
+                    document.field1.textview1.value = eval(sum1);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }             
+            }
+
+            var sum2 = 0;
+            function plus2(sign){
+                sum2 = document.field2.textview2.value + sign + 1;
+                if(document.field2.textview2.value){
+                    document.field2.textview2.value = eval(sum2);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus2(sign){
+                sum2 = document.field2.textview2.value + sign + 1;
+                if(document.field2.textview2.value){
+                    document.field2.textview2.value = eval(sum2);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+
+            var sum3 = 0;
+            function plus3(sign){
+                sum3 = document.field3.textview3.value + sign + 1;
+                if(document.field3.textview3.value){
+                    document.field3.textview3.value = eval(sum3);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus3(sign){
+                sum3 = document.field3.textview3.value + sign + 1;
+                if(document.field3.textview3.value){
+                    document.field3.textview3.value = eval(sum3);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+
+            var sum4 = 0;
+            function plus4(sign){
+                sum4 = document.field4.textview4.value + sign + 1;
+                if(document.field4.textview4.value){
+                    document.field4.textview4.value = eval(sum4);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus4(sign){
+                sum4 = document.field4.textview4.value + sign + 1;
+                if(document.field4.textview4.value){
+                    document.field4.textview4.value = eval(sum4);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+
+            var sum5 = 0;
+            function plus5(sign){
+                sum5 = document.field5.textview5.value + sign + 1;
+                if(document.field5.textview5.value){
+                    document.field5.textview5.value = eval(sum5);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus5(sign){
+                sum5 = document.field5.textview5.value + sign + 1;
+                if(document.field5.textview5.value){
+                    document.field5.textview5.value = eval(sum5);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+
+            var sum6 = 0;
+            function plus6(sign){
+                sum6 = document.field6.textview6.value + sign + 1;
+                if(document.field6.textview6.value){
+                    document.field6.textview6.value = eval(sum6);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus6(sign){
+                sum6 = document.field6.textview6.value + sign + 1;
+                if(document.field6.textview6.value){
+                    document.field6.textview6.value = eval(sum6);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+
+            var sum7 = 0;
+            function plus7(sign){
+                sum7 = document.field7.textview7.value + sign + 1;
+                if(document.field7.textview7.value){
+                    document.field7.textview7.value = eval(sum7);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus7(sign){
+                sum7 = document.field7.textview7.value + sign + 1;
+                if(document.field7.textview7.value){
+                    document.field7.textview7.value = eval(sum7);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+
+            var sum8 = 0;
+            function plus8(sign){
+                sum8 = document.field8.textview8.value + sign + 1;
+                if(document.field8.textview8.value){
+                    document.field8.textview8.value = eval(sum8);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+            function minus8(sign){
+                sum8 = document.field8.textview8.value + sign + 1;
+                if(document.field8.textview8.value){
+                    document.field8.textview8.value = eval(sum8);
+                }
+                if(document.field.textview0.value){
+                sum =  "4" + "*" + document.field1.textview1.value + "+" + 
+                "5" + "*" + document.field2.textview2.value + "+" +
+                "6" + "*" + document.field3.textview3.value + "+" +
+                "7" + "*" + document.field4.textview4.value + "+" +
+                "8" + "*" + document.field5.textview5.value + "+" +
+                "9" + "*" + document.field6.textview6.value + "+" +
+                document.field7.textview7.value + "+" +
+                document.field8.textview8.value 
+                document.field.textview0.value = eval(sum)+ " ";
+            }
+            }
+
+            function insert(num){
+                document.form.textview.value = 
+                document.form.textview.value + num;
+            }
+            function clean(){
+                document.form.textview.value = "";
+            }
+            function equal(){
+                var exp = document.form.textview.value;
+                if(exp){
+                    document.form.textview.value = eval(exp);
+                }
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,351 @@
+/*----------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+
+/*----------------------------------*/
+
+body{
+    margin: 0px auto;
+    padding: 0px 0px;
+    background: linear-gradient(107.56deg, #3FA0D7 0%, #094AAB 100%);;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.container{
+    max-width: 375px;
+    margin: 0px auto;
+    padding: 0px 0px;
+    top: 0px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.header__content {
+    margin: 0px auto;
+    padding: 0px 0px;
+    max-width: 375px;
+}
+.logo{
+    margin: 0px auto;
+    padding: 0px 0px;
+
+    width: 189px;
+    height: 88px;
+    left: 93px;
+    right: 93px;
+    top: calc(50% - 88px/2 - 613px);
+}
+.line{
+    margin: 0px auto;
+    padding: 0px 0px;
+
+    width: 226px;
+    height: 0px;
+    left: 74px;
+    top: 125px;
+
+    border: 1px solid rgba(255, 255, 255, 0.31);
+}
+
+.menu{
+    margin: 0px auto;
+    padding: 0px 0px;
+
+    max-width: 375px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.label{
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+
+    
+}
+.left{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    margin: 0px auto;
+    padding: 0px 0px;
+
+    grid-column: 1/2;
+    width: 186px;
+    height: 53px;
+}
+.right{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    margin: 0px auto;
+    padding: 0px 0px;
+
+    grid-column: 2/3;
+    width: 186px;
+    height: 53px;
+}
+.num{
+    font-weight: bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cells{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.item{
+    margin: 0px auto;
+    padding: 0px 0px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fields{
+    margin: 0px auto;
+    padding: 0px 0px;
+
+    grid-column: 2/3;
+    background-color: #ffffff;
+    width: 45px;
+    height: 31px;
+}
+.plus{
+    font-size: 50px;
+    width: 27px;
+    height: 27px;
+}
+.minus{
+    font-size: 50px;
+    width: 27px;
+    height: 27px;
+}
+
+.all{
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.image{
+
+    width: 28.11px;
+    height: 28.11px;
+
+    background: linear-gradient(135deg, #C7FCFF 50.14%, #93F8FF 50.15%);
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: rotate(-45deg);
+}
+.calculator{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    background-color: #ffffff;
+    border-radius: 20px;
+    max-width: 375px;
+    z-index: 2;
+}
+
+
+.button{
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.button:hover{
+    color: #fffad1;
+}
+
+.clean{
+    grid-column: 1/4;
+    background-color: #34495E;
+}
+.zero{
+    grid-column: 1/4;
+    background-color: #3498DB;
+}
+.sign{
+    background-color: #E74C3C;
+    width: 93.94px;
+    height: 94.1px;
+}
+.number{
+    background-color: #3498DB;
+    width: 93.94px;
+    height: 94.1px;
+}
+.equal{
+    background-color: #53D870;
+    width: 93.94px;
+    height: 94.1px;
+}
+form{
+    max-width: 100%;
+}
+input{
+    background-color: #ffffff00;
+    width: 100%;
+    height: 100%;
+    border:none;
+    font-size: 100%;
+    color: #34495E;
+    
+    font-weight: bold;
+    outline: none;
+    text-align: right;
+}
+.output{
+    
+    width: 40px;
+    height: 29px;
+    border:none;
+    font-size: 25px;
+}
+
+.input{
+    grid-column: 1/-1;
+    padding: 0;
+    width: 345px;
+    height: 94.1px;
+    font-size: 44px;
+}
+.space{
+    height: 25px;
+}
+@media (max-width: 374px){
+    .container{
+        max-width: 320px;
+    }
+    .calculator{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+        background-color: #ffffff;
+        border-radius: 2px;
+        max-width: 320px;
+    }
+    form{
+        max-width: 100%;
+    }
+    input{
+        width: 100%;
+        height: 93px;
+        border:none;
+        
+        color: #34495E;
+        font-size: 40px;
+        font-weight: bold;
+        outline: none;
+        text-align: right;
+    }
+    .label{
+        grid-column: 1/3;
+    }
+    .input{
+        grid-column: 1/-1;
+        padding: 0;
+    }
+    
+    .button{
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 26px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .button:hover{
+        color: #fffad1;
+    }
+    
+    .clean{
+        grid-column: 1/4;
+        background-color: #34495E;
+    }
+    .zero{
+        grid-column: 1/4;
+        background-color: #3498DB;
+    }
+    .sign{
+        background-color: #E74C3C;
+        width: 80.1621px;
+        height: 80.2986px;
+    }
+    .number{
+        background-color: #3498DB;
+        width: 80.1621px;
+        height: 80.2986px;
+    }
+    .equal{
+        background-color: #53D870;
+        width: 80.1621px;
+        height: 80.2986px;
+    }
+}
