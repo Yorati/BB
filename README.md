@@ -1,1 +1,2 @@
-# BBС
+# BBС  - Big Battle Calculator
+
